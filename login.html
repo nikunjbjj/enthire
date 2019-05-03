@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5000203576","applicationID":"73558834","transactionName":"M10EMEJRX0dRUEBbCgoXKzJzH3VVQ1tWXQQWXCULXkRDW1xfUUBKLVYCAUg=","queueTime":0,"applicationTime":115,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="google-signin-client_id" content="695087881551-l2qnkei7fbeg9ubip3u6cgjj5n79j1qv.apps.googleusercontent.com">
-    <title>Login</title>
+    <title>Dashboard</title>
 
     <script type="text/javascript"> (function (a, b, c, d, e, f, g) { e['ire_o'] = c; e[c] = e[c] || function () { (e[c].a = e[c].a || []).push(arguments) }; f = d.createElement(b); g = d.getElementsByTagName(b)[0]; f.async = 1; f.src = a; g.parentNode.insertBefore(f, g); })('//d.impactradius-event.com/A361126-134b-4507-a629-980ff77102a81.js', 'script', 'ire', document, window); </script>
     <link rel="shortcut icon" href="/favicon.ico">
@@ -46,7 +46,7 @@
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.0/jquery.xdomainrequest.min.js'></script>
     <![endif]-->
     <!--NewRelic - New Relic sampling implementation  scripts start -->
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5000203576","applicationID":"73558834","transactionName":"M10EMEJRX0dRUEBbCgoXKzJzH3BXU1xBXBEXewkKREJeWFxWRh0sClwDHA==","queueTime":0,"applicationTime":6,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+
     <!--NewRelic - New Relic sampling implementation  scripts End -->
 
     <!--Segment Analytics scripts - Keep last element of Head tag-->
@@ -70,7 +70,7 @@
     </script>
 
 </head>
-<body class="checkMob notrans ">
+<body class="checkMob notrans auth-pages">
     <input type="hidden" id="hdnIsAccountSuspended" value="N" />
     <input type="hidden" id="hdnIsTrialPlan" value="False" />
     <input type="hidden" id="hdnShowPlanPopUp" value="N" />
@@ -90,122 +90,476 @@
                 </div>
 
 <div id="page-navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+
+                <li class="hidden-xs">
+
+    <div class="dropdown js-notifications disp-ib navbar-notification">
+        <input type="hidden" id="hdnLoggedInUserAcctID" />
+        <input type="hidden" id="hdnfacebookappid" />
+        <input type="hidden" id="hdnfacebookappsecret" />
+        <input type="hidden" id="hdnfacebookscope" />
+        <input type="hidden" id="hdnlinkedinauthurl" />
+        <input type="hidden" id="hdnlinkedinclientid" />
+        <input type="hidden" id="hdnlinkedinappsecret" />
+        <input type="hidden" id="hdnlinkedinscope" />
+        <input type="hidden" id="hdnlinkedinstate" />
+        <input type="hidden" id="hdnTotalNotificationsCount" />
+        <input type="hidden" id="hdntwitteraccesskey" />
+        <input type="hidden" id="hdntwitteraccesssecret" />
+        <input type="hidden" id="hdntwitteraccesstokenurl" />
+        <input type="hidden" id="hdntwitterapiurl" />
+        <input type="hidden" id="hdntwitterauthapponly" />
+        <input type="hidden" id="hdntwitterauthorizeurl" />
+        <input type="hidden" id="hdntwitterauthrequesttoken" />
+        <input type="hidden" id="hdntwitterconsumerkey" />
+        <input type="hidden" id="hdntwitterconsumersecret" />
+        <input type="hidden" id="hdntwittertokenage" />
+        <a class="dropdown-toggle exclude-dirty navbar-notification-icon js-notifications-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell fa-lg text-white"></i></a>
+        <ul class="dropdown-menu js-navbar-notification-center-menu hidden-xs">
+            <li>
+                <div class="navbar-notification-center">
+                    <div class="pri-navbar ptb0 bdr-b-gray row">
+                        <ul class="nav nav-tabs pri-nav" role="tablist" id="recentTab">
+                            <li class="active"><a id="AllNotificationTab" class="link" data-target="#AllNotification" data-toggle="tab">All</a></li>
+                            <li class=""><a id="MessagesNotificationTab" class="link" data-target="#MessagesNotification" data-toggle="tab">Messages</a></li>
+                            <li class=""><a id="NotificationTab" class="link" data-target="#Notification" data-toggle="tab">Notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content row pos-r">
+                        <span class="box-shadow-t hide"></span>
+                        <div class="tab-pane active" id="AllNotification">
+                            <div class="empty-state text-center p30 mt20">
+                                <img src="/Content/images/icon-notification.png" class="img mt30 mb20" height="60" width="79" alt="" />
+                                <h3 class="h3 font-primary">No New Notifications or Messages</h3>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="MessagesNotification">
+                            <div class="empty-state text-center p30 mt20">
+                                <img src="/Content/images/icon-notification.png" class="img mt30 mb20" height="60" width="79" alt="" />
+                                <h3 class="h3 font-primary">No New Messages</h3>
+                                <a class="btn btn-primary-bordered apply-dirty js-mymessagelink mt25" onclick=fnMyMessageClick(216183440);>See All Messages</a>
+                            </div>
+                            <a class="text-blue text-center p15 h4 shadow-gray show-all-msg js-mymessagelink hide fill-state" onclick=fnMyMessageClick(216183440);>Show all messages</a>
+                        </div>
+                        <div class="tab-pane" id="Notification">
+                            <div class="empty-state text-center p30 mt20">
+                                <img src="/Content/images/icon-notification.png" class="img mt30 mb20" height="60" width="79" alt="" />
+                                <h3 class="h3 font-primary">No New Notifications</h3>
+                            </div>
+                        </div>
+                        <span class="box-shadow-b hide"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+                </li>
+                                    <li class="dropdown">
+                            <a class="dropdown-toggle exclude-dirty" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="fa fa-angle-down fa-lg"></span></a>
+                            <ul class="dropdown-menu navbar-user-detail">
+                                <li class="vcenter-container">
+                                        <div class="col-xs-12 col-sm-6 vcenter navbar-trial-detail text-center text-left-xs js-trailplan hide">
+                                            <input type="hidden" id="checkcsuser" />
+                                            <i class="fa fa-warning fa-2x text-red mb5 pull-left-xs mr10-xs"></i>
+                                            <p class="js-trailplanactivated hide">Your free trial expires in <span class="bold"><span class="js-daysleft"></span> days</span></p>
+                                            <p class="js-trailplanexpired hide" id="exprplantext">Your subscription has expired</p>
+                                            <a class="btn btn-tertiary mt10 mt0-xs exclude-dirty" onclick="window.jobtap.planupgrade.ShowUpgradePopUp(true,true);">Upgrade Now</a>
+                                        </div>
+                                    <div class="col-xs-12 col-sm-6 vcenter navbar-account-detail">
+                                        <ul class="row list-account-detail">
+                                            <li>
+                                                <span class="text">
+                                                    <span class="bold">Sreeta Gorripaty</span>
+                                                    <span class="disp-b">Wrevie</span>
+                                                </span>
+                                            </li>
+                                                <li id="AccountDetailLi" class="hide">
+                                                    <ul class="text lht18">
+                                                        <li><span class="text-light-gray">Available Credit: </span><span id="AccountCredit" class="semi-bold"></span></li>
+                                                        <li><span id="CurrentPlanName" class="text-light-gray">Power Play: </span><span id="availablejobs" class="semi-bold"></span></li>
+                                                        <li><span class="text-light-gray">Remaining Resume Views: </span><span id="remainingResumeViews" class="semi-bold"></span></li>
+                                                    </ul>
+                                                </li>
+                                            <li data-name="help"><a class="text-blue exclude-dirty" href="/helpdesklogin" target="_blank"><i class="fa fa-question-circle"></i>Help</a></li>
+                                            <li><a href="/accounts/logout" onclick="sessionStorage.clear();"><i class='fa fa-sign-out'></i>Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+        </ul>
         <ul class="nav navbar-nav navbar-left">
-            <li class="active"><a>Employer</a></li>
-            <li><a href="https://applicant.mightyrecruiter.com/login">Job Seeker</a></li>
+                            <li data-name="jobs"><a class="apply-dirty" href="/jobs">My Jobs</a></li>
+                            <li class="dropdown" data-name="candidatesmain">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CANDIDATES <span class="fa fa-angle-down fa-lg"></span></a>
+                    <ul class="dropdown-menu">
+                            <li data-name="candidates"><a class="apply-dirty" href="/candidates/search">My Candidates</a></li>
+                                                <li data-name="resumes"><a class="apply-dirty" onclick=fnMyMessageClick(216183440);>MY MESSAGES</a></li>
+                                                    <li data-name="resumes"><a class="apply-dirty" href="/resumes">RESUME DATABASE</a></li>
+                    </ul>
+                </li>
+                            <li data-name="interviews"><a class="apply-dirty" href="/interview">INTERVIEWS</a></li>
+                            <li data-name="settings"><a class="apply-dirty" href="/settings">ADMIN TOOLS</a></li>
+                            <li data-name="reports"><a class="apply-dirty" href="/reports">REPORTS</a></li>
+                            <li><a class="apply-dirty navbar-nav-highlight" onclick="CheckOpenJobsInPlan(56878, '/jobs/create')">CREATE JOB</a></li>
         </ul>
 </div>
             </div>
         </nav>
     <div class="page-container  m-ui  ">
-        <input type="hidden" id="hdnControllerName" name="hdnControllerName" value="accounts" />
+        <input type="hidden" id="hdnControllerName" name="hdnControllerName" value="dashboard" />
 
 
-<div class="content account-form">
-    <div class="container plr0">
-        <section class="clearfix align-center welcome">
-            <form action="/login?returnUrl=%2Fresumes%2FGet%3FjobID%3D0%26page_number%3D1%26page_size%3D20%26search_on%3Djt%26search_string%3Dsoftware%26location%3D%26sortBy%3Dscore%26radius%3D30%26min_experience%3D0%26max_experience%3D1200%26mned%3DNA%26min_age%3D1%26max_age%3D5000%26hide_viewed_resume%3Dfalse%26hide_reviewed_resume%3Dfalse%26documentId%3D0%26similarResumeSearch%3Dfalse" class="form-horizontal login-flow bg-default clearfix align-center" id="frmlogin" method="post" role="form">    <div class="plr15 text-center">
-        <img src="/Content/images/logo.png" alt="MightyRecruiter" title="MightyRecruiter" />
-        <div class="form-group">
-            <h3 class="h3">Sign in to your account</h3>
+<script>
+    if ("False" == "True") {
+        sessionStorage.setItem("expiredplanname", "complimentary subscription");
+        sessionStorage.setItem("istrialexpired", "true");
+    }
+</script>
+    <div class="content page-dashboard">
+        <input type="hidden" id="funnelpath" value="N" />
+        <div class="page-topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12 text-center-xs">
+                        <h1 class="page-title text-ellipsis mb15-xs">Dashboard</h1>
+                    </div>
+                    <div class="col-sm-3 col-xs-12 hide">
+                        <div class="input-group search-box pull-right mb15-xs">
+                            <input type="search" placeholder="Enter job title, jobid, or location" class="form-control" data-ng-model="jobCtrl.searchInputText" data-ng-keyup="$event.keyCode == 13 ?jobCtrl.searchonKeyUp($event) : null" />
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" data-ng-click="jobCtrl.search();"> <span class="fa fa-search"></span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="container" data-ng-app="jte">
+            <input type="hidden" value="216183440" id="hdnLoggedInUserId" />
+            <div class="row">
+                <div class="col-xs-12 col-md-3 pull-right p0-xs">
+                    <div class="ajscontrolergsdiv" data-ng-controller="GlobalSetupController as globalSetupCtrl" data-ng-show="305 == '301' || 305 == '305' || 305 == '306'" ng-cloak>
 
-        <span class="hide js-customErrorForSocial field-validation-error form-group alert alert-danger" data-valmsg-for="CustomError" data-valmsg-replace="true">Invalid Email Address</span>
-        <span class="field-validation-valid form-group alert alert-danger js-customerror" data-valmsg-for="CustomError" data-valmsg-replace="true"></span>
-        <div class="form-group">
-            <input class="form-control text-box single-line" data-val="true" data-val-regex="Email Address is not valid" data-val-regex-pattern="[\s]{0,}[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?[\s]{0,}" data-val-required="Required" id="UserName" maxlength="50" name="UserName" placeholder="Email Address" type="text" value="" />
-            <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+<div class="global-setup-widget bg-default js-GlobalSection mb30 ng-hide">
+    <h3 class="mt10 mb0 pb15 bdr-b-gray">
+        <span class="h3 semi-bold font-primary m0">Global Setup ({{globalSetupCtrl.sectionCount}})</span>
+        <a class="pull-right js-dismissAll h4 text-primary mt5 js-showDismissAllPopup" data-ng-click="globalSetupCtrl.DismissAllPopup()">Dismiss All</a>
+    </h3>
+    <section class="clearfix js-showGlobalSection">
+        <article class="global-setup-tuple js-setupJobBoost ng-hide">
+            <h4 class="h4 mt0 mb5"><a class="bold font-primary text-primary mt0 mb5 exclude-dirty js-lnk-job-boost">Want more candidates?</a></h4>
+            <p class="p">Boost your job performance by having our team of Media Buyers purchase premium placement for your jobs.</p>
+            <button class="close" id="modalSetupJobBoostClose" data-ng-click="globalSetupCtrl.RemoveSection('GSJB')">×</button>
+        </article>
+        <article class="global-setup-tuple js-setupIndeedPosting ng-hide">
+            <h4 class="h4 mt0 mb5"><a class="semi-bold font-primary text-primary mt0 mb5 exclude-dirty" onclick="ShowIndeedSetupPopup();">Setup Indeed Posting</a></h4>
+            <p class="p">Provide us with your Indeed account information and we will ensure that all of your jobs are placed on Indeed.</p>
+            <button class="close" id="modalSetupIndeedPostingClose" data-ng-click="globalSetupCtrl.RemoveSection('GSIN')">×</button>
+        </article>
+        <article class="global-setup-tuple js-addCompanyLogo ng-hide">
+            <h4 class="h4 mt0 mb5"><a class="semi-bold font-primary text-primary mt0 mb5" href="/companies?source=nav&callingurl=%2fdashboard">Add your company logo</a></h4>
+            <p class="p js-addCompanyLogoDescription">Add a logo to personalize your job and gain more traction with job seekers.</p>
+            <button class="close" id="modalCompanyLogoClose" data-ng-click="globalSetupCtrl.RemoveSection('GSCL')">×</button>
+        </article>
+        <article class="global-setup-tuple js-setCareerSite ng-hide">
+            <h4 class="h4 mt0 mb5"><a class="semi-bold font-primary text-primary mt0 mb5" href="/career/sitepage?source=nav&callingurl=%2fdashboard">Setup your Career Site</a></h4>
+            <p class="p js-setCareerSiteDescription">Stand out with a custom branded Career site to represent your company. No coding required!</p>
+            <button class="close" id="modalCareerSiteClose" data-ng-click="globalSetupCtrl.RemoveSection('GSCS')">×</button>
+        </article>
+        <article class="global-setup-tuple js-setEEOReporting ng-hide">
+            <h4 class="h4 mt0 mb5">
+                <a class="semi-bold font-primary text-primary mt0 mb5" href="/accounts/compliance?source=nav&callingurl=%2fdashboard">Enable EEO Reporting</a>
+            </h4>
+            <p class="p js-setEEOReportingDescription">When you enable EEO Reporting, MightyRecruiter will capture data on a job applicant's gender and race/ethnicity.</p>
+            <button class="close" id="modalEEOReportingClose" data-ng-click="globalSetupCtrl.RemoveSection('GSER')">×</button>
+        </article>
+        <article class="global-setup-tuple js-addTeamMembers ng-hide">
+            <h4 class="h4 mt0 mb5">
+                <a class="semi-bold font-primary text-primary mt0 mb5" href="/users/create?source=nav&callingurl=%2fdashboard">Add Team Members</a>
+            </h4>
+            <p class="p js-addTeamMembersDescription">Invite your team members to use MightyRecruiter. Add as many as you want - there's no limit!</p>
+            <button class="close" id="modalTeamMembersClose" data-ng-click="globalSetupCtrl.RemoveSection('GSTM')">×</button>
+        </article>
+    </section>
+    <div class="empty-state text-center js-showGlobalSectionComplete ng-hide" ng-show="globalSetupCtrl.sectionCount <= 0">
+        <img src="/Content/images/icon-like-hand.png" class="img mt30 mb0" height="31" width="41" alt="" />
+            <h2 class="h2 font-primary page-title-primary mt15 mb5" id="Headline">Setup Complete!</h2>
+        <button id="btnDismissSetup" class="btn btn-primary-bordered mtb20" data-ng-click="globalSetupCtrl.RemoveSection('GSDS')">Dismiss Setup</button>
+    </div>
+</div>
+                    </div>
+                        <div class="js-event" data-ng-controller="CandidateEventController as eventCtrl">
+                            <input type="hidden" id="hdnOutlookAppId" value="34ad572e-abb2-4768-a397-d3a751a80915" />
+                            <input type="hidden" id="hdnGoogleClientId" value="695087881551-l2qnkei7fbeg9ubip3u6cgjj5n79j1qv.apps.googleusercontent.com" />
+                            <input type="hidden" id="hdnGoogleSynced" value="False" />
+                            <input type="hidden" id="hdnOutlookSynced" value="False" />
+
+
+<div class="daily-agenda-widget bg-default mb30 js-event" >
+    <input type="hidden" id="hdnInterviewWidget" value="true" />
+    <h3 class="mt10 mb0 pb15 bdr-b-gray">
+        <span class="h3 semi-bold font-primary m0">Daily Agenda</span>
+        <a class="pull-right h4 text-primary mt5" href="/Interview/index">View All</a>
+    </h3>
+    <div class="row bg-secondary bdr-t-light-gray bdr-b-light-gray mt-1 p15" >
+        <div class="pull-left">
+            <span class="h4 semi-bold font-primary m0" ng-cloak>{{eventCtrl.interviewWidget.widgetDate}}</span><br />
+            <span class="fs12 pos-a" ng-show="!eventCtrl.interviewWidget.isEnabledToday">Today</span>
         </div>
-        <div class="form-group">
-            <input class="form-control text-box single-line password" data-val="true" data-val-length="Password Should be 6-15 characters" data-val-length-max="15" data-val-length-min="6" data-val-required="Required" id="Password" maxlength="15" name="Password" placeholder="Password" type="password" value="" />
-            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+        <div class="btn-group pull-right ml10">
+            <button type="button" class="btn btn-default min-w-inherit" ng-disabled="!eventCtrl.interviewWidget.isEnabledPrev" ng-click="eventCtrl.prevDayInterview()"><i class="fa fa-chevron-left"></i></button>
+            <button type="button" class="btn btn-default min-w-inherit" ng-disabled="!eventCtrl.interviewWidget.isEnabledNext" ng-click="eventCtrl.nextDayInterview()"><i class="fa fa-chevron-right"></i></button>
         </div>
-        <div class="row">
-            <div class="form-actions">
-                <button class='btn btn-primary btn-block js-includespinner js-SignInMWR' data-spnrajaxcount=0><span class="btn-text">Sign In</span></button>
+        <button type="button" ng-click="eventCtrl.todaysInterview()" class="btn btn-default min-w-inherit pull-right" ng-disabled="!eventCtrl.interviewWidget.isEnabledToday">Today</button>
+    </div>
+    <div class="text-center  bg-default daily-agenda-widget" data-ng-show="eventCtrl.interviewWidget.ShowLoadingImage">
+        <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
+        <h3 class="h4 mt15 text-dark-gray">Loading...</h3>
+    </div>
+    <ul class="list-daily-agenda mb0" data-ng-show="!eventCtrl.interviewWidget.ShowLoadingImage">
+        <li ng-repeat="interview in eventCtrl.interviewWidget.dayInterviews" ng-cloak>
+            <span class="text-light-gray">{{interview.startTime}} - {{interview.endTime}}</span><a class="disp-b h4 m0" href="/candidates/index_v2?jobid={{interview.jobId}}&activatetab=interviews&applicationid={{interview.applicationId}}">{{interview.title}}</a>
+        </li>
+    </ul>
+    <div class="empty-state text-center" data-ng-show="!eventCtrl.interviewWidget.ShowLoadingImage">
+        <img ng-show="eventCtrl.interviewWidget.showCalendarIcon" ng-cloak src="/Content/images/icon-calendar.png" class="img mt30 mb0" height="38" width="36" alt="calendar">
+        <h3 class="h3 font-primary text-secondary mt15 mb0" id="Headline" ng-cloak>{{eventCtrl.interviewWidget.syncText}}</h3>
+        <button class="btn btn-primary-bordered mt20" onclick="window.location.href = 'settings/synccalendar?source=nav'" ng-cloak ng-show="eventCtrl.interviewWidget.showCalendarSetup">Calendar Setup</button>
+    </div>
+</div>
+                        </div>
+                </div>
+                <div class="col-xs-12 col-md-9 pull-left p0-xs">
+                    <!--REPORTING section : starts-->
+<div class="overview-widget clearfix report-widget js-dashboardReport">
+    <h1 class="overview-heading text-uppercase">REPORTS</h1>
+    <!--Loading State: Starts-->
+    <div class="text-center mtb120 js-dashboardReportLoading">
+        <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
+        <h3 class="h4 mt15 text-dark-gray">Loading...</h3>
+    </div>
+    <!--Loading State: Ends-->
+    <!--Empty State: Starts-->
+    <div class="empty-state text-center p30 hide">
+        <img src="/Content/images/icon-chart.png" class="img mtb30" height="61" width="64" alt="" />
+        <h2 class="h2 font-primary page-title-primary">Looks like we don't have any job information to display yet</h2>
+        <p class="p mb30">Once your jobs start getting views and applies, we will show you overview metrics on how your job is performing as well as where your candidate are coming from</p>
+    </div>
+    <!--Empty State: Ends-->
+    <div id="ReportData" class="hide clearfix">
+        <ul class="nav nav-tabs pri-nav bdr-b-gray" role="tablist">
+            <li class="active"><a id="JobPerformanceTab" class="link ml30" data-target="#JobPerformanceReport" data-toggle="tab">JOB PERFORMANCE</a></li>
+            <li class=""><a id="CandidateSourcesTab" class="link" data-target="#CandidateSources" data-toggle="tab">CANDIDATES SOURCE</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane report-chart active" id="JobPerformanceReport">
+            </div>
+            <div class="tab-pane" id="CandidateSources">
+                <div class="empty-state text-center p30 col-xs-12 col-sm-8 pl30 pl15-xs hide">
+                    <img src="/Content/images/icon-chart.png" class="img mtb30" height="61" width="64" alt="" />
+                    <h2 class="h2 font-primary page-title-primary" id="Headline">Candidate Source Report</h2>
+                    <p class="p mb30">Looks like you don't have any Applicants yet!</p>
+                </div>
+                <div class="col-xs-12 col-sm-8 pl30 pl15-xs hide">
+                    <div id="CandidateSourcesReport" class="report-chart mt40 mt15-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4 bdr-l-gray bdr-l-none-xs bdr-t-gray-xs pull-right min-h-inherit">
+                    <ul class="row mb0 min-h-inherit">
+                        <li class="job-candidate-number js-views">
+                            <h1 class="h2 bold m0">
+                                <a href="/reports/candidatesource?status=open,clsd,arch" class="text-primary">
+                                    <i class="fa fa-circle-o-notch fa-spin h3 m0"></i>
+                                </a>
+                            </h1>
+                            <h2 class="h4 mtb5">Views</h2>
+                        </li>
+                        <li class="job-candidate-number js-applies">
+                            <h1 class="h2 bold m0">
+                                <a href="/reports/candidatesource?status=open,clsd,arch" class="text-primary">
+                                    <i class="fa fa-circle-o-notch fa-spin h3 m0"></i>
+                                </a>
+                            </h1>
+                            <h2 class="h4 mtb5">Applies</h2>
+                        </li>
+                        <li class="job-candidate-number js-cvr">
+                            <h1 class="h2 bold m0">
+                                <a href="/reports/candidatesource?status=open,clsd,arch" class="text-primary">
+                                    <i class="fa fa-circle-o-notch fa-spin h3 m0"></i>
+                                </a>
+                            </h1>
+                            <h2 class="h4 mtb5">Conversion</h2>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="clearfix">
-        <input data-val="true" data-val-required="The IsPersistent field is required." id="IsPersistent" name="IsPersistent" type="hidden" value="" />
-        <div class="checkbox disp-ib">
-            <input type="checkbox" id="chkStayLoggedIn">
-            <label for="chkStayLoggedIn">Stay Logged In</label>
-        </div>
-        <a id="btnFrgtPwd" class="lht1 mt10 pull-right">Forgot your password?</a>
+</div>
+<!--REPORTING section : ends-->
+
+                    <!--My Jobs section : starts-->
+                    <div class="ajscontrolerdiv" data-ng-controller="JobsController as jobCtrl">
+
+<div class="overview-widget clearfix" data-ng-show="jobCtrl.ShowJobSection" ng-cloak>
+    <h1 class="overview-heading clearfix">
+            <a class="text-uppercase text-white" onclick="window.location.href = '/jobs?status=OPEN,DRFT&createdBy=216183440'; return false;" data-ng-bind="jobCtrl.RecStatusString">My Jobs</a>
+                    <a class="pull-right text-capitalize text-white" data-ng-click="jobCtrl.CheckOpenJobsInPlan(56878, '/jobs/create')"><i class="fa fa-plus mr10"></i>Create Job</a>
+    </h1>
+    <!--Loading State: Starts-->
+    <div class="text-center mtb120" data-ng-show="jobCtrl.executing || jobCtrl.ShowLoadingImage" >
+        <i class="fa fa-spinner fa-spin fa-3x text-primary"></i>
+        <h3 class="h4 mt15 text-dark-gray">Loading...</h3>
     </div>
-    <hr/>
-    <div class="mt30">
-        <button type="button" onclick="liAuth('login')" class="btn btn-block btn-linkedin"><span class="btn-text semi-bold fs14 text-white"><i class="fa fa-linkedin-square mr10 text-white v-align-tb"></i>Log In with Linkedin</span></button>
-        <div class="btn btn-default btn-block bg-secondary ml0 mt15 js-logInGoogle">
-            <span class="btn-text semi-bold fs14">
-                <img class="mr10 v-align-tb" src="/Content/images/icon-google.png" alt="Google logo" height="20" width="20" />Log In with Google
-            </span>
-        </div>
+    <!--Loading State: Ends-->
+    <!--Empty State: Starts-->
+    <div class="empty-state text-center p30 ng-cloak" data-ng-show="!jobCtrl.executing && (jobCtrl.items == undefined || jobCtrl.items.length <= 0)" ng-cloak>
+        <img src="/Content/images/icon-bag.png" class="img mt30 mb0" height="60" width="60" alt="" />
+        <h2 class="h2 font-primary page-title-primary">Looks like you don't have any open jobs</h2>
+            <button class='btn btn-primary-bordered js-includespinner mtb15' onclick="CheckOpenJobsInPlan(56878, '/jobs/create')" data-spnrajaxcount=0><span class="btn-text">Create Job</span></button>
     </div>
-</form>
-            <form action="/accounts/forgotpassword" class="form-horizontal login-flow bg-default clearfix align-center hide" id="forgotpassword" method="post" role="form">    <div class="plr15 text-center">
-        <img src="/Content/images/logo.png" alt="MightyRecruiter" title="MightyRecruiter" />
-        <div class="form-group">
-            <h3 class="h3">Confirm Email Address</h3>
-        </div>
-        <span id="EmailAddressNotFound" class="field-validation-error hide form-group alert alert-danger">Email address not found. Please try again</span>
-        <span id="NotActive" class="field-validation-error hide form-group alert alert-danger">Your user account is Inactive.<br>Please contact your administrator.</span>
-        <div class="form-group">
-            <input class="form-control text-box single-line" data-val="true" data-val-regex="Email Address is not valid" data-val-regex-pattern="[\s]{0,}[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?[\s]{0,}" data-val-required="Required" id="UserName" maxlength="50" name="UserName" placeholder="Email Address" type="text" value="" />
-            <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
-        </div>
-        <div class="row">
-            <div class="form-actions">
-                <button id="btnSendEmail" class='btn btn-primary btn-block  js-includespinner' data-spnrajaxcount=0><span class="btn-text">Send Email</span></button>
+    <!--Empty State: Ends-->
+    <div class="tuple-section plr15-xs" data-ng-show="jobCtrl.items != undefined && jobCtrl.items.length > 0" ng-cloak>
+        <div class="tuple tuple-body" data-ng-class="jobCtrl.GetTupleClass(item.ReviewStatus)" ng-repeat="item in jobCtrl.items | limitTo: jobCtrl.limitToValue">
+            <div class="tuple-col col-xs-12 col-sm-6 plr0-sm mb10">
+                <h3 class="tuple-title">
+                        <a class="text-ellipsis" ng-href="{{JobDetailPageUrl}}" data-ng-mousedown="jobCtrl.GetJobTitleLink(item.StatusCD,item.ID,'/jobs/overview/','True', item.ReviewStatus)">{{item.Title}} (#{{item.ID}})</a><a class="badge badge-red v-align-t font-primary text-uppercase text-white semi-bold mt5 ml10" ng-show="item.ReviewStatus=='RJCT'" ng-href="{{JobDetailPageUrl}}" data-ng-mousedown="jobCtrl.GetJobTitleLink(item.StatusCD,item.ID,'/jobs/overview/','True', item.ReviewStatus)">Job Rejected</a>
+                </h3>
+                <h5 class="text-dark-gray h4 mb5 m0-xs"><i class="fa fa-briefcase text-gray mr5"></i> {{item.CompanyName}}</h5>
+
+                <ul class="list-info h5 text-light-gray">
+                    <li>
+                        <address class="text-light-gray">
+                            {{item.City}}, {{item.State}} {{item.PostalCode}}
+                        </address>
+                    </li>
+                    <li class="hidden-xs"><span>Created {{item.CreatedOn | moment}}</span></li>
+                </ul>
+            </div>
+            <div class="tuple-col col-xs-6 col-sm-3 text-right plr0-sm">
+                    <a data-ng-click="jobCtrl.GetCandidateLink(item.StatusText,item.ID,'new')" data-ng-class="jobCtrl.GetCursorDefaultClass(item.StatusText)"><span class="count-box count-box-primary mr10 mr0-xs">{{item.CandidateNewCount}}</span><span class="h5 text-uppercase text-gray">NEW APPLICANTS</span></a>
+            </div>
+            <div class="tuple-col col-xs-6 col-sm-3 text-right plr0-sm">
+                    <a data-ng-click="jobCtrl.GetCandidateLink(item.StatusText,item.ID,'')" data-ng-class="jobCtrl.GetCursorDefaultClass(item.StatusText)"><span class="count-box count-box-secondary mr10 mr0-xs">{{item.CandidateCount + item.TotalProspects}}</span><span class="h5 text-uppercase text-gray">TOTAL APPLICANTS</span></a>
             </div>
         </div>
     </div>
-    <hr/>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="p"><a id="btnBackLogin"><i class="fa fa-chevron-left"></i> Back to log in</a></p>
-        </div>
-    </div>
-</form>
+</div>
 
-            <form action="/accounts/emailconfirmation" class="form-horizontal login-flow bg-default clearfix align-center hide" id="emailconfirmation" method="get" role="form">    <div class="plr15 text-center">
-        <img src="/Content/images/logo.png" alt="MightyRecruiter" title="MightyRecruiter" />
-        <div class="form-group">
-            <h3 class="h3">Thank You!</h3>
-        </div>
-        <div class="form-group">
-            You're almost finished! Please check your email to create your new password.
-        </div>
-    </div>
-    <hr/>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="p"><a id="btnLogin"><i class="fa fa-chevron-left"></i> Back to log in</a></p>
-        </div>
-    </div>
-</form>
 
-        </section>
+    <div class="bdr-t-gray text-center p15" data-ng-show="!jobCtrl.ShowLoadingImage" ng-cloak>
+        <a class="text-primary" ng-cloak data-ng-show="jobCtrl.ShowLoadMore && jobCtrl.items != undefined && jobCtrl.items.length > 0" onclick="window.location.href = '/jobs'; return false;">View All Jobs</a>
+
     </div>
-    <div class="clearfix"></div>
+
+                    </div>
+                    <!--My Jobs section : ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="popupIndeedPostingSetupWrap" class="hide">
+    <div id="popupIndeedPostingSetup" class="pt30 text-dark-gray bdr-b-gray">
+        <div class="row ptb30">
+            <div class="col-sm-6">
+                <h5 class="h5 bold mt0">Don't have an account?</h5>
+                <p class="p fs12">No problem. Take a quick trip to <a class="text-primary bold exclude-dirty" href="https://secure.indeed.com/account/register" target="_blank">Indeed</a> to follow a few easy steps to create a new account.</p>
+                <a href="/settings/indeedarticles" target="_blank" class="text-primary semi-bold disp-b-xs mb15-xs exclude-dirty">See more details here</a>
+            </div>
+            <form id="frmIndeedPostingSetup" class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label fs12 bold disp-b" for="EmailAddress">INDEED ACCOUNT EMAIL*</label>
+                    <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field INDEED ACCOUNT EMAIL* must be a string or array type with a maximum length of &#39;50&#39;." data-val-maxlength-max="50" data-val-regex="Email Address is not valid" data-val-regex-pattern="[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?" data-val-required="Email Required" id="EmailAddress" name="EmailAddress" placeholder="Enter Email" type="text" value="" />
+                    <span class="field-validation-valid text-danger mb10" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group mb0">
+                    <label class="control-label fs12 bold disp-b" for="Password">INDEED PASSWORD*</label>
+                    <input class="form-control text-box single-line password" data-val="true" data-val-required="Password Required" id="Password" name="Password" placeholder="Enter Password" type="password" value="" />
+                    <span class="field-validation-valid text-danger mb10" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <span class="field-validation-valid text-danger mb10 js-indeed-errormessage" style="display:none;"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="popupRemoveIndeedNotificationWrap" class="hide">
+    <div id="popupRemoveIndeedNotification" class="text-dark-gray">
+        <p class="p fs12 mt5 mb30">We should complete the integration within the next 24 hours. You may update that information in <a href="https://recruiter.mightyrecruiter.com/settings" class="text-primary bold exclude-dirty">Admin Tools</a> any time. If you have any questions, please contact us at <a href="tel:18443821750" class="text-primary bold exclude-dirty">1-844-382-1750</a>.</p>
+    </div>
+</div>
+
+
+
+<input type="hidden" value=N id="hdnHasCreditCard" />
+<div id="popupJobBoostWrap" class="hide">
+    <div class="postingpopup js-postingpopupdiv" id="popupJobBoost">
+        <div class="row pos-r">
+            <div class="col-md-12">
+                <div class="multi-popup-wrap row" id="multiPopupWrap">
+                    <div class="screen1 col-md-12 text-dark-gray">
+                        <p class="p fs14 mt0">Finding top notch candidates can be hard. Receive premium placement on multiple boards across the MightyRecruiter Network. Increase your traffic, get more applicants, and make more hires without wasting your money.</p>
+                        <h4 class="h4 bold m0">Select a budget to boost your jobs:</h4>
+                        <p class="p fs12 mt5 mb0">This media budget will be distributed evenly among your open jobs. If you want to give individual jobs an additional boost, navigate to the Advertise Tab within a job and purchase an individual Job Promote.</p>
+                        <div class="col-md-8 mb10">
+                            <div class="row">
+                                <div class="form-group js-formBoostAllJob">
+                                    <div class="radio">
+                                        <input type="radio" name="radBoostAllJob" id="radBoostAllJobPrice1" checked data-postingprice="99">
+                                        <label class="control-label" for="radBoostAllJobPrice1">$99</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radBoostAllJob" id="radBoostAllJobPrice2" data-postingprice="199">
+                                        <label class="control-label" for="radBoostAllJobPrice2">$199</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radBoostAllJob" id="radBoostAllJobPrice3" data-postingprice="299">
+                                        <label class="control-label" for="radBoostAllJobPrice3">$299</label>
+                                    </div>
+                                    <div class="radio mt15">
+                                        <input type="radio" name="radBoostAllJob" id="radBoostAllJobCustom" data-postingprice="0">
+                                        <label class="control-label" for="radBoostAllJobCustom"></label>
+                                        <div class="input-group mt-25 ml5 js-input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input class="form-control js-form-control js-customboost" id="jbotcustomamount" disabled="disabled" placeholder="Enter a Custom Amount (Minimum $99)" type="text">
+                                            <span id="jbotcustomamounterror" class="text-danger js-jbotcustomamount field-validation-valid" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen2 payment hide col-md-12"></div>
+                </div>
+                <div class="js-editCardExclusion">
+                    <div class="bg-secondary p10 clearfix form-actions mb10">
+                        <div class="clearfix mt10">
+
+                            <div id="dvJobBoostPricing" class="price-container pull-none-xs">You will be charged* : <em class="price-tag">$99</em></div><button class="btn btn-primary btn-block-xs pull-right js-btnBuyNow pull-none-xs" data-spnrajaxcount="0" onclick="global.btnAnimate = this; multiScreenPopup(); return false;"><span class="btn-text">Buy Now</span></button>
+                        </div>
+                    </div><p class="fs10 text-italics js-ccdisclaimer">*Depending on where you are, foreign exchange fees may apply. Provider is not responsible for any exchange fees or surcharges imposed by your bank card or card issuer.</p>
+                </div>
+                <div class="js-editCardInclusion hide bg-secondary p10 clearfix mb10 mt10">
+                    <div class="form-actions form-actions-cc m0 pull-right pull-none-xs">
+                        <button class="btn btn-primary btn-twin-xs js-btnBuyNow" data-spnrajaxcount=0 onclick="global.btnAnimate = this; multiScreenPopup(); return false;"><span class="btn-text">Buy Now</span></button>
+                        <button class="btn btn-link btn-twin-xs" data-spnrajaxcount=0 onclick="ToggleEditCardScreen_Posting(false, false); return false;"><span class="btn-text">Cancel</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
     </div>
-        <footer class="page-footer ml0">
+        <footer class="page-footer ">
             <div class="footer-col-wrap">
-                    <aside class="footer-col hidden-xs text-left">
-                        <a href="/" class="logo"><img src="/Content/images/logo.png" alt="MightyRecruiter" title="MightyRecruiter" width="163" height="35"></a>
-                    </aside>
-                    <aside class="footer-col text-center">
-                        <div class="auth-hide text-left text-center-xs disp-ib">
-                            <h5 class="title">Customer Service</h5>
-                            <address class="h5 mb0">
-                                <a href="mailto:recruiterhelp@mightyrecruiter.com">recruiterhelp@mightyrecruiter.com</a><br>
-                                844-382-1750<br />
-                                Monday - Friday 8am - 5pm CST
-                            </address>
-                        </div>
+                    <aside class="footer-col pull-left text-left">
+                        <span>© 2019, Bold Limited. All rights reserved</span>
                     </aside>
                 <aside class="footer-col text-right v-align-b">
                     <ul class="list-inline">
@@ -223,24 +577,44 @@
 <script src="/bundles/scripts?v=2FyMuHdW-Eb23pZq-IT9u0p4Ub0pjvxN8USx6NZwRdU1"></script>
 <script src="//maps.googleapis.com/maps/api/js?client=gme-boldna&libraries=places"></script>
 
-        <script>
+<script  src='/Scripts/Shared/_MessageCount.js?v=20181005043743'></script><script  src='/Scripts/Shared/accountcredit.js?v=20181005043743'></script><script  src='/Scripts/Shared/CheckPlanExpired.js?v=20181005043742'></script>        <script src="https://cci.framehpci.com/WBSStatic/site60/proxy/js/jquery.ba-postmessage.2.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cci.framehpci.com/WBSStatic/site60/proxy/js/hpci-cciframe-1.0.js" type="text/javascript" charset="utf-8"></script>
+<script  src='/Scripts/Payment/hpci-popup.js?v=20181005043742'></script>    <script src="/bundles/script-auth-all?v=3zGXSGlblDLZGqiTqSYSQYgVtjPgK4UJzWCCYvbWBo81"></script>
+<script src="/bundles/script-social?v=FIsgsRHnm9LRehDfBNBjKjRCGsmmpCpEWcz86C6na-c1"></script>
+<script  src='/Scripts/Shared/Notification.js?v=20181005043743'></script>    <script>
         $(document).ready(function () {
             if (window.jobtap.siftscience != undefined && window.jobtap.siftscience != 'undefined' && window.jobtap.siftscience != '') {
                 window.jobtap.siftscience.SiftscienceJsKey = '18f6baf80f';
-                window.jobtap.siftscience.userid = '';
+                window.jobtap.siftscience.userid = '56878';
             }
-            window.jobtap.appcues.userid = '';
-            window.jobtap.appcues.email = '';
-            window.jobtap.global.loggedinUseremail = '';
-            window.jobtap.global.loggedinUsername = '';
+            window.jobtap.appcues.userid = '1637792f-9c61-4e53-b5ea-49ebc8a55b71';
+            window.jobtap.appcues.email = 'sreetasai@gmail.com';
+            window.jobtap.global.loggedinUseremail = 'sreetasai@gmail.com';
+            window.jobtap.global.loggedinUsername = 'Sreeta Gorripaty';
             window.jobtap.visitor.SourceApp = 'JEMPP';
             window.jobtap.visitor.EnvApp = '';
         });
     </script>
 <script  src='/Scripts/Shared/siftscience.js?v=20181005043743'></script>
-    <script  src='/Scripts/Account/Login.js?v=20181005043739'></script>
-    <script  src='/Scripts/Login/Google.js?v=20181005043740'></script>
-    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script  src='/Scripts/Shared/jteFilters.js?v=20181005043743'></script>
+    <script  src='/Scripts/Dashboard/JobsController.js?v=20181005043739'></script>
+    <script  src='/Scripts/Dashboard/Index.js?v=20181005043739'></script>
+    <script  src='/Scripts/Shared/_DeleteCookie.js?v=20181005043743'></script>
+    <script  src='/Scripts/Shared/ChartsGraphs.js?v=20181005043742'></script>
+    <script  src='/Scripts/Dashboard/GlobalSetupController.js?v=20181005043739'></script>
+    <script  src='/Scripts/Shared/IndeedSetup.js?v=20181005043742'></script>
+    <!-- required for interview-->
+    <script  src='/Scripts/Shared/scheduler.js?v=20181005043743'></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+            onload="this.onload=function(){};jobtap.scheduler.handleClientLoad()"
+            onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+    <script  src='/Scripts/Shared/jteFilters.js?v=20181005043743'></script>
+    <script  src='/Scripts/Candidates/CandidateEventController.js?v=20181228051904'></script>
+    <script  src='/Scripts/Interview/graph-js-sdk-web.js?v=20181005043739'></script>
+    <script  src='/Scripts/Dashboard/_InterviewWidget.js?v=20181005043739'></script>
+    <script  src='/Scripts/Shared/JobBoost.js?v=20181005043742'></script>
 
 
 
@@ -256,8 +630,8 @@
             element.src = "https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js";
             document.body.appendChild(element);
             $('#scriptFreshWidget').on('load', function () {
-                FreshWidget.init("", { "queryString": "&widgetType=popup&helpdesk_ticket[requester]=", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#008492", "alignment": "2", "offset": "235px", "formHeight": "500px", "url": "https://jobtap.freshdesk.com" });
-                FRESHCHAT_VISITORINFO = { "name": "", "email": "", "phone": "" }
+                FreshWidget.init("", { "queryString": "&widgetType=popup&helpdesk_ticket[requester]=Sreeta Gorripaty", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Support", "buttonColor": "white", "buttonBg": "#008492", "alignment": "2", "offset": "235px", "formHeight": "500px", "url": "https://jobtap.freshdesk.com" });
+                FRESHCHAT_VISITORINFO = { "name": "Sreeta Gorripaty", "email": "sreetasai@gmail.com", "phone": "" }
                 var fc_CSS = document.createElement('link'); fc_CSS.setAttribute('rel', 'stylesheet'); var isSecured = (window.location && window.location.protocol == 'https:'); var lang = document.getElementsByTagName('html')[0].getAttribute('lang'); var rtlLanguages = ['ar', 'he']; var rtlSuffix = (rtlLanguages.indexOf(lang) >= 0) ? '-rtl' : ''; fc_CSS.setAttribute('type', 'text/css'); fc_CSS.setAttribute('href', ((isSecured) ? 'https://d36mpcpuzc4ztk.cloudfront.net' : 'http://assets1.chat.freshdesk.com') + '/css/visitor' + rtlSuffix + '.css'); document.getElementsByTagName('head')[0].appendChild(fc_CSS); var fc_JS = document.createElement('script'); fc_JS.type = 'text/javascript'; fc_JS.defer = true; fc_JS.src = ((isSecured) ? 'https://d36mpcpuzc4ztk.cloudfront.net' : 'http://assets.chat.freshdesk.com') + '/js/visitor.js'; (document.body ? document.body : document.getElementsByTagName('head')[0]).appendChild(fc_JS); window.freshchat_setting = 'eyJ3aWRnZXRfc2l0ZV91cmwiOiJqb2J0YXAuZnJlc2hkZXNrLmNvbSIsInByb2R1Y3RfaWQiOm51bGwsIm5hbWUiOiJKb2JUYXAgIiwid2lkZ2V0X2V4dGVybmFsX2lkIjpudWxsLCJ3aWRnZXRfaWQiOiI3MzZlNzBmYi0xMDEwLTQ1NjgtODRmMC05YTg5NzM4OTQzYTAiLCJzaG93X29uX3BvcnRhbCI6dHJ1ZSwicG9ydGFsX2xvZ2luX3JlcXVpcmVkIjpmYWxzZSwiaWQiOjgwMDAwMDczMTEsIm1haW5fd2lkZ2V0Ijp0cnVlLCJmY19pZCI6IjYxZmIwZjBlOWU3MGQ5ZGE0MDBiNjc1YjMyYzFjY2ViIiwic2hvdyI6MSwicmVxdWlyZWQiOjIsImhlbHBkZXNrbmFtZSI6IkpvYlRhcCAiLCJuYW1lX2xhYmVsIjoiTmFtZSIsIm1haWxfbGFiZWwiOiJFbWFpbCIsIm1lc3NhZ2VfbGFiZWwiOiJNZXNzYWdlIiwicGhvbmVfbGFiZWwiOiJQaG9uZSBOdW1iZXIiLCJ0ZXh0ZmllbGRfbGFiZWwiOiJUZXh0ZmllbGQiLCJkcm9wZG93bl9sYWJlbCI6IkRyb3Bkb3duIiwid2VidXJsIjoiam9idGFwLmZyZXNoZGVzay5jb20iLCJub2RldXJsIjoiY2hhdC5mcmVzaGRlc2suY29tIiwiZGVidWciOjEsIm1lIjoiTWUiLCJleHBpcnkiOjE0NjIwMzQ5NjUwMDAsImVudmlyb25tZW50IjoicHJvZHVjdGlvbiIsImRlZmF1bHRfd2luZG93X29mZnNldCI6MzAsImRlZmF1bHRfbWF4aW1pemVkX3RpdGxlIjoiQ2hhdCBpbiBwcm9ncmVzcyIsImRlZmF1bHRfbWluaW1pemVkX3RpdGxlIjoiTGV0J3MgdGFsayEiLCJkZWZhdWx0X3RleHRfcGxhY2UiOiJZb3VyIE1lc3NhZ2UiLCJkZWZhdWx0X2Nvbm5lY3RpbmdfbXNnIjoiV2FpdGluZyBmb3IgYW4gYWdlbnQiLCJkZWZhdWx0X3dlbGNvbWVfbWVzc2FnZSI6IkhpISBIb3cgY2FuIHdlIGhlbHAgeW91IHRvZGF5PyIsImRlZmF1bHRfd2FpdF9tZXNzYWdlIjoiT25lIG9mIHVzIHdpbGwgYmUgd2l0aCB5b3UgcmlnaHQgYXdheSwgcGxlYXNlIHdhaXQuIiwiZGVmYXVsdF9hZ2VudF9qb2luZWRfbXNnIjoie3thZ2VudF9uYW1lfX0gaGFzIGpvaW5lZCB0aGUgY2hhdCIsImRlZmF1bHRfYWdlbnRfbGVmdF9tc2ciOiJ7e2FnZW50X25hbWV9fSBoYXMgbGVmdCB0aGUgY2hhdCIsImRlZmF1bHRfYWdlbnRfdHJhbnNmZXJfbXNnX3RvX3Zpc2l0b3IiOiJZb3VyIGNoYXQgaGFzIGJlZW4gdHJhbnNmZXJyZWQgdG8ge3thZ2VudF9uYW1lfX0iLCJkZWZhdWx0X3RoYW5rX21lc3NhZ2UiOiJUaGFuayB5b3UgZm9yIGNoYXR0aW5nIHdpdGggdXMuIElmIHlvdSBoYXZlIGFkZGl0aW9uYWwgcXVlc3Rpb25zLCBmZWVsIGZyZWUgdG8gcGluZyB1cyEiLCJkZWZhdWx0X25vbl9hdmFpbGFiaWxpdHlfbWVzc2FnZSI6Ik91ciBhZ2VudHMgYXJlIHVuYXZhaWxhYmxlIHJpZ2h0IG5vdy4gU29ycnkgYWJvdXQgdGhhdCwgYnV0IHBsZWFzZSBsZWF2ZSB1cyBhIG1lc3NhZ2UgYW5kIHdlJ2xsIGdldCByaWdodCBiYWNrLiIsImRlZmF1bHRfcHJlY2hhdF9tZXNzYWdlIjoiV2UgY2FuJ3Qgd2FpdCB0byB0YWxrIHRvIHlvdS4gQnV0IGZpcnN0LCBwbGVhc2UgdGVsbCB1cyBhIGJpdCBhYm91dCB5b3Vyc2VsZi4iLCJhZ2VudF90cmFuc2ZlcmVkX21zZyI6IllvdXIgY2hhdCBoYXMgYmVlbiB0cmFuc2ZlcnJlZCB0byB7e2FnZW50X25hbWV9fSIsImFnZW50X3Jlb3Blbl9jaGF0X21zZyI6Int7YWdlbnRfbmFtZX19IHJlb3BlbmVkIHRoZSBjaGF0IiwidmlzaXRvcl9zaWRlX2luYWN0aXZlX21zZyI6IlRoaXMgY2hhdCBoYXMgYmVlbiBpbmFjdGl2ZSBmb3IgdGhlIHBhc3QgMjAgbWludXRlcy4iLCJhZ2VudF9kaXNjb25uZWN0X21zZyI6Int7YWdlbnRfbmFtZX19IGhhcyBiZWVuIGRpc2Nvbm5lY3RlZCIsInNpdGVfaWQiOiI2MWZiMGYwZTllNzBkOWRhNDAwYjY3NWIzMmMxY2NlYiIsImFjdGl2ZSI6dHJ1ZSwid2lkZ2V0X3ByZWZlcmVuY2VzIjp7IndpbmRvd19jb2xvciI6IiM3Nzc3NzciLCJ3aW5kb3dfcG9zaXRpb24iOiJCb3R0b20gUmlnaHQiLCJ3aW5kb3dfb2Zmc2V0IjoiMzAiLCJtaW5pbWl6ZWRfdGl0bGUiOiJMZXQncyB0YWxrISIsIm1heGltaXplZF90aXRsZSI6IkNoYXQgaW4gcHJvZ3Jlc3MiLCJ0ZXh0X3BsYWNlIjoiWW91ciBNZXNzYWdlIiwid2VsY29tZV9tZXNzYWdlIjoiSGkhIEhvdyBjYW4gd2UgaGVscCB5b3UgdG9kYXk/IiwidGhhbmtfbWVzc2FnZSI6IlRoYW5rIHlvdSBmb3IgY2hhdHRpbmcgd2l0aCB1cy4gSWYgeW91IGhhdmUgYWRkaXRpb25hbCBxdWVzdGlvbnMsIGZlZWwgZnJlZSB0byBwaW5nIHVzISIsIndhaXRfbWVzc2FnZSI6Ik9uZSBvZiB1cyB3aWxsIGJlIHdpdGggeW91IHJpZ2h0IGF3YXksIHBsZWFzZSB3YWl0LiIsImFnZW50X2pvaW5lZF9tc2ciOiJ7e2FnZW50X25hbWV9fSBoYXMgam9pbmVkIHRoZSBjaGF0IiwiYWdlbnRfbGVmdF9tc2ciOiJ7e2FnZW50X25hbWV9fSBoYXMgbGVmdCB0aGUgY2hhdCIsImFnZW50X3RyYW5zZmVyX21zZ190b192aXNpdG9yIjoiWW91ciBjaGF0IGhhcyBiZWVuIHRyYW5zZmVycmVkIHRvIHt7YWdlbnRfbmFtZX19IiwiY29ubmVjdGluZ19tc2ciOiJXYWl0aW5nIGZvciBhbiBhZ2VudCJ9LCJyb3V0aW5nIjp7ImNob2ljZXMiOnsibGlzdDEiOlsiMCJdLCJsaXN0MiI6WyIwIl0sImxpc3QzIjpbIjAiXSwiZGVmYXVsdCI6WyIwIl19LCJkcm9wZG93bl9iYXNlZCI6ImZhbHNlIn0sInByZWNoYXRfZm9ybSI6dHJ1ZSwicHJlY2hhdF9tZXNzYWdlIjoiV2UgY2FuJ3Qgd2FpdCB0byB0YWxrIHRvIHlvdS4gQnV0IGZpcnN0LCBwbGVhc2UgdGVsbCB1cyBhIGJpdCBhYm91dCB5b3Vyc2VsZi4iLCJwcmVjaGF0X2ZpZWxkcyI6eyJuYW1lIjp7InRpdGxlIjoiTmFtZSIsInNob3ciOiIyIn0sImVtYWlsIjp7InRpdGxlIjoiRW1haWwiLCJzaG93IjoiMiJ9LCJwaG9uZSI6eyJ0aXRsZSI6IlBob25lIE51bWJlciIsInNob3ciOiIwIn0sInRleHRmaWVsZCI6eyJ0aXRsZSI6IlRleHRmaWVsZCIsInNob3ciOiIwIn0sImRyb3Bkb3duIjp7InRpdGxlIjoiRHJvcGRvd24iLCJzaG93IjoiMCIsIm9wdGlvbnMiOlsibGlzdDEiLCJsaXN0MiIsImxpc3QzIl19fSwiYnVzaW5lc3NfY2FsZW5kYXIiOm51bGwsIm5vbl9hdmFpbGFiaWxpdHlfbWVzc2FnZSI6eyJ0ZXh0IjoiT3VyIGFnZW50cyBhcmUgdW5hdmFpbGFibGUgcmlnaHQgbm93LiBTb3JyeSBhYm91dCB0aGF0LCBidXQgcGxlYXNlIGxlYXZlIHVzIGEgbWVzc2FnZSBhbmQgd2UnbGwgZ2V0IHJpZ2h0IGJhY2suIiwidGlja2V0X2xpbmtfb3B0aW9uIjoiMCIsImN1c3RvbV9saW5rX3VybCI6IiJ9LCJwcm9hY3RpdmVfY2hhdCI6ZmFsc2UsInByb2FjdGl2ZV90aW1lIjoxNSwic2l0ZV91cmwiOiJqb2J0YXAuZnJlc2hkZXNrLmNvbSIsImV4dGVybmFsX2lkIjpudWxsLCJkZWxldGVkIjpmYWxzZSwib2ZmbGluZV9jaGF0Ijp7InNob3ciOiIxIiwiZm9ybSI6eyJuYW1lIjoiTmFtZSIsImVtYWlsIjoiRW1haWwiLCJtZXNzYWdlIjoiTWVzc2FnZSJ9LCJtZXNzYWdlcyI6eyJ0aXRsZSI6IkxlYXZlIHVzIGEgbWVzc2FnZSEiLCJ0aGFuayI6IlRoYW5rIHlvdSBmb3Igd3JpdGluZyB0byB1cy4gV2Ugd2lsbCBnZXQgYmFjayB0byB5b3Ugc2hvcnRseS4iLCJ0aGFua19oZWFkZXIiOiJUaGFuayB5b3UhIn19LCJtb2JpbGUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDE2LTAxLTE4VDIyOjIzOjU2LjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNi0wMi0xNFQxMjo0OToxOC4wMDBaIn0=';
             });
         }

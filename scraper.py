@@ -4,10 +4,7 @@ import requests
 from lxml import html
 
 session_requests = requests.session()
-login_url = "https://recruiter.mightyrecruiter.com/accounts?ReturnUrl=%2F"
-result = session_requests.get(login_url)
-tree = html.fromstring(result.text)
-
+login_url = "https://recruiter.mightyrecruiter.com/login"
 payload = {
 	"UserName": "Sreetasai@gmail.com",
 	"Password": "Wrevie123",
@@ -20,9 +17,10 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
     'accept': 'application/json, text/plain, */*',
     'authority': 'recruiter.mightyrecruiter.com',
-    'referer': 'https://recruiter.mightyrecruiter.com/accounts?ReturnUrl=%2F',
+    'referer': 'https://recruiter.mightyrecruiter.com/accounts',
     'upgrade-insecure-requests': '1',
-    'origin': 'https://recruiter.mightyrecruiter.com'
+    'origin': 'https://recruiter.mightyrecruiter.com',
+    'content-type': 'application/x-www-form-urlencoded'
 }
 
 result = session_requests.post(
@@ -33,6 +31,7 @@ result = session_requests.post(
 
 print ("Login Status code: " + str(result.status_code))
 
+#### Get List of resumes ####
 url = "https://recruiter.mightyrecruiter.com/resumes/Get"
 params = (
     ('jobID', '0'),
@@ -53,6 +52,11 @@ params = (
     ('documentId', '0'),
     ('similarResumeSearch', 'false'),
 )
+
 resumes_list_result = session_requests.get(url, headers=headers, params=params)
 print ("Resumes status code: " + str(resumes_list_result.status_code))
-print (resumes_list_result.text)
+
+### Loop over the resumes data and fetch the resume HTML ####
+json_response = resumes_list_result.json()
+print (json_response)
+
