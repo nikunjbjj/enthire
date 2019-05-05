@@ -23,7 +23,6 @@ browser.find_element_by_id("resumeSearch").click()
 browser.implicitly_wait(5)
 
 browser.find_element_by_xpath("/html/body/div[1]/div[1]/div/div[2]/div/section/div[2]/div[3]/div[2]/div[3]/a").click()
-import pdb; pdb.set_trace()
 
 # html_text = browser.find_element_by_id("ifrmLoadRsm")
 
