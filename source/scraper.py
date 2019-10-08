@@ -59,4 +59,3 @@ print ("Resumes status code: " + str(resumes_list_result.status_code))
 ### Loop over the resumes data and fetch the resume HTML ####
 json_response = resumes_list_result.json()
 print (json_response)
-
