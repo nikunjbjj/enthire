@@ -46,7 +46,16 @@ subprocess.call(["afplay", "temple_sound.wav"])
 input("Entered captcha?")
 err_count = 0
 
-for url_idx in range(3, 101):
+
+# Finished ranges
+# 1-61 initial
+
+
+
+# Prioritized ranges
+# index: 701-713;;; row numbers 7003- 7128
+
+for url_idx in range(701, 714):
     f = open("data/url_lists_by_zipcode/num_%s" % url_idx, "r")
     urls = f.readlines()
     urls = [url.replace('\n', '') for url in urls if not url.startswith('#')]
@@ -60,8 +69,13 @@ for url_idx in range(3, 101):
             try:
                 WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@class,"icl-TextLink--primary rezemp-u-h4")]')))
             except Exception as e:
-                subprocess.call(["afplay", "temple_sound.wav"])
-                input('Please check browser and press enter')
+                if err_count == 0 or err_count == 10:
+                    subprocess.call(["afplay", "temple_sound.wav"])
+                    input('Please check browser and press enter')
+                    err_count = 0
+                err_count += 1
+                print("WebDriverWait messed up in url_idx: %s, link num: %s, url: %s, Error: %s" % (url_idx, link_no, url, e))
+
 
 
             try:
